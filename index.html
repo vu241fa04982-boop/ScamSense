@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScamSense — Educational Message & Link Safety Reviewer</title>
+    <meta name="description" content="ScamSense helps you spot suspicious patterns, risk indicators, and warning signs in messages, emails, and links so you can make safer decisions." />
+    <meta property="og:title" content="ScamSense — Educational Message & Link Safety Reviewer" />
+    <meta property="og:description" content="ScamSense helps you spot suspicious patterns, risk indicators, and warning signs in messages, emails, and links so you can make safer decisions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar Navigation (3-Zone Contract) -->
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- Zone 1: Single text wordmark with smart safety emblem -->
+        <a href="#home" class="nav-brand" data-view="home">
+          <svg class="nav-brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3L4 8V16C4 23.5 9.1 30.5 16 32C22.9 30.5 28 23.5 28 16V8L16 3Z" fill="#EA580C" fill-opacity="0.15" stroke="#EA580C" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M16 10V18M16 22V22.5" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span>SCAMSENSE</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links">
+          <a href="#home" class="nav-link active" data-view="home">Home</a>
+          <a href="#analyze" class="nav-link" data-view="analyze">Analyze</a>
+          <a href="#history" class="nav-link" data-view="history">History</a>
+          <a href="#saved" class="nav-link" data-view="saved">Saved</a>
+          <a href="#learn" class="nav-link" data-view="learn">Learn</a>
+          <a href="#about" class="nav-link" data-view="about">About</a>
+        </nav>
+
+        <!-- Zone 3: Primary Actions & Theme Toggle -->
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle color theme">
+            <svg id="themeIconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+          </button>
+          <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="#home" class="mobile-nav-link" data-view="home">Home</a>
+        <a href="#analyze" class="mobile-nav-link" data-view="analyze">Analyze</a>
+        <a href="#history" class="mobile-nav-link" data-view="history">History</a>
+        <a href="#saved" class="mobile-nav-link" data-view="saved">Saved</a>
+        <a href="#learn" class="mobile-nav-link" data-view="learn">Learn</a>
+        <a href="#about" class="mobile-nav-link" data-view="about">About</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================================== -->
+      <!-- VIEW: HOME                                     -->
+      <!-- ============================================== -->
+      <section id="view-home" class="view-section active-view">
+        <div class="container">
+          <!-- Hero Section -->
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="hero-tag">Smart Safety Awareness</span>
+              <h1 class="hero-headline">Before you trust the message, check the signs.</h1>
+              <p class="hero-description">
+                ScamSense helps you spot suspicious patterns in messages, emails, and online text so you can make safer decisions.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#analyze" class="btn btn-primary btn-lg" data-view="analyze">
+                  Analyze a Message →
+                </a>
+                <a href="#learn" class="btn btn-secondary btn-lg" data-view="learn">
+                  Learn the Warning Signs
+                </a>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted);">
+                ✓ 100% Client-side & private · No data leaves your browser · Educational tool
+              </p>
+            </div>
+
+            <!-- Animated Safety Illustration Card -->
+            <div class="hero-visual-card">
+              <div class="hero-visual-header">
+                <div class="hero-sim-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span>LIVE PATTERN DETECTOR</span>
+                </div>
+                <div class="hero-sim-dots">
+                  <span class="hero-sim-dot"></span>
+                  <span class="hero-sim-dot"></span>
+                  <span class="hero-sim-dot"></span>
+                </div>
+              </div>
+
+              <!-- Animated Example Message Card -->
+              <div class="hero-sim-message-box">
+                <div class="scanner-beam"></div>
+                <p>
+                  "<span class="hero-annotated-token hero-token-reward">Congratulations!</span> You have won 
+                  <span class="hero-annotated-token hero-token-reward">₹50,000</span>. 
+                  <span class="hero-annotated-token hero-token-urgent">Claim your reward now</span> via 
+                  <span class="hero-annotated-token hero-token-link">http://win-claim.xyz/verify</span>"
+                </p>
+              </div>
+
+              <div class="hero-detected-callouts">
+                <span class="hero-callout-pill reward">🎁 REWARD</span>
+                <span class="hero-callout-pill urgent">⚡ URGENT</span>
+                <span class="hero-callout-pill link">🔗 LINK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Dashboard Statistics -->
+          <div class="stats-strip">
+            <div class="stat-box">
+              <div class="stat-number tabular-nums" id="statMessagesChecked">0</div>
+              <div class="stat-label">Messages Checked</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number tabular-nums" id="statWarningSigns">0</div>
+              <div class="stat-label">Warning Signs Found</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number tabular-nums" id="statSavedAnalyses">0</div>
+              <div class="stat-label">Saved Analyses</div>
+            </div>
+          </div>
+
+          <!-- 3-Step How It Works Section -->
+          <div class="section-header">
+            <span class="section-kicker">Simple & Fast</span>
+            <h2 class="section-title">How ScamSense Works</h2>
+            <p class="section-subtitle">Three easy steps to review suspicious communications before you act.</p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h3 class="step-title">Paste</h3>
+              <p class="step-description">Paste the message, email excerpt, or SMS you received into the workspace. Sensitive numbers can be masked with one click.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h3 class="step-title">Check</h3>
+              <p class="step-description">ScamSense looks for common warning signs like artificial deadlines, threat tactics, unsolicited rewards, and disguised links.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h3 class="step-title">Understand</h3>
+              <p class="step-description">See what each warning sign means, why it matters, and receive actionable verification steps to keep yourself secure.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: ANALYZE                                  -->
+      <!-- ============================================== -->
+      <section id="view-analyze" class="view-section">
+        <div class="container-narrow">
+          
+          <!-- TOOL 1: ANALYZE A MESSAGE -->
+          <div class="analyze-card" id="analyzeMessageCard">
+            <div class="workspace-header">
+              <span class="tool-kicker">Message Scanner</span>
+              <h2>Analyze a Message</h2>
+              <p>Paste the message below. Remove personal information before analyzing.</p>
+            </div>
+
+            <!-- Sensitive Info Detector Banner -->
+            <div class="sensitive-warning-banner" id="sensitiveWarningBanner">
+              <div class="sensitive-warning-text">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span id="sensitiveWarningDetail">Please remove sensitive information before continuing. ScamSense never needs real passwords or card numbers.</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="redactSensitiveBtn">Redact Numbers</button>
+            </div>
+
+            <!-- Example Message Quick Loaders -->
+            <div class="example-chips-group">
+              <span class="example-chips-label">Try an example:</span>
+              <button type="button" class="example-chip-btn" data-example-type="reward">🎁 Lottery Prize</button>
+              <button type="button" class="example-chip-btn" data-example-type="threat">🛑 Account Threat</button>
+              <button type="button" class="example-chip-btn" data-example-type="delivery">📦 Courier Fee</button>
+              <button type="button" class="example-chip-btn" data-example-type="appointment">🩺 Appointment (Normal)</button>
+              <button type="button" class="example-chip-btn" data-example-type="jobOffer">💼 Secret Job Offer</button>
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="input-textarea-wrapper">
+              <textarea 
+                id="messageInput" 
+                class="message-textarea" 
+                placeholder="Paste your message here (e.g. email body, text message, WhatsApp forward)..." 
+                rows="8"
+                aria-label="Message content to analyze"
+              ></textarea>
+            </div>
+
+            <!-- Counters -->
+            <div class="textarea-footer">
+              <div>
+                <span class="char-counter tabular-nums" id="charCount">0 chars</span>
+                <span style="margin: 0 0.4rem;">·</span>
+                <span class="char-counter tabular-nums" id="wordCount">0 words</span>
+              </div>
+              <div style="font-size:0.8rem; color:var(--text-muted);">
+                Press <kbd style="background:var(--bg-subtle); padding:1px 5px; border-radius:3px;">Ctrl</kbd> + <kbd style="background:var(--bg-subtle); padding:1px 5px; border-radius:3px;">Enter</kbd> to analyze
+              </div>
+            </div>
+
+            <!-- Workspace Actions -->
+            <div class="workspace-actions">
+              <div class="privacy-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Analyzed securely in your browser. Never transmitted to a server.</span>
+              </div>
+              <div class="btn-group-right">
+                <button type="button" class="btn btn-secondary" id="clearInputBtn">Clear</button>
+                <button type="button" class="btn btn-primary" id="analyzeBtn">Analyze Message →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="analyze-tool-divider"></div>
+
+          <!-- TOOL 2: INSPECT A LINK -->
+          <div class="analyze-card analyze-subtool-card" id="analyzeLinkCard">
+            <div class="workspace-header">
+              <span class="tool-kicker">Web Safety Tool</span>
+              <h2>Inspect a Link</h2>
+              <p>Paste any suspicious URL to inspect its technical anatomy: protocol, domain, subdomains, and shortening status.</p>
+            </div>
+
+            <div class="tool-input-row">
+              <input 
+                type="text" 
+                id="linkInspectorInput" 
+                class="tool-input" 
+                placeholder="e.g. http://win-claim-portal.rewards-update.online/claim?id=99281" 
+                aria-label="URL to inspect"
+              />
+              <button type="button" class="btn btn-primary" id="inspectLinkBtn">Inspect Link →</button>
+            </div>
+
+            <div class="example-chips-group" style="margin-top:-0.35rem; margin-bottom:1.25rem;">
+              <span class="example-chips-label">Try sample link:</span>
+              <button type="button" class="example-chip-btn preset-link-btn" data-url="http://paypal.com.customer-verify.site/account">Deceptive Subdomain</button>
+              <button type="button" class="example-chip-btn preset-link-btn" data-url="https://bit.ly/claim-prize-today">Shortened Link</button>
+              <button type="button" class="example-chip-btn preset-link-btn" data-url="https://www.google.com">Legitimate Domain</button>
+            </div>
+
+            <div id="linkResultsPanel" class="tool-results-panel">
+              <div class="tool-metrics-grid">
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Protocol</div>
+                  <div class="tool-metric-val" id="linkMetricProtocol">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Hostname</div>
+                  <div class="tool-metric-val" id="linkMetricHostname">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">True Domain</div>
+                  <div class="tool-metric-val" id="linkMetricDomain">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Subdomain</div>
+                  <div class="tool-metric-val" id="linkMetricSubdomain">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Path</div>
+                  <div class="tool-metric-val" id="linkMetricPath">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Shortener</div>
+                  <div class="tool-metric-val" id="linkMetricShortener">-</div>
+                </div>
+              </div>
+
+              <h4 style="margin-bottom:0.75rem; font-size:1.05rem; margin-top:1.25rem;">Technical Observations</h4>
+              <div class="tool-observations-list" id="linkObservationsList">
+                <!-- Populated dynamically -->
+              </div>
+
+              <div class="tool-conclusion-box">
+                <strong>Educational Note:</strong> <span id="linkConclusionText">-</span>
+              </div>
+
+              <div class="tool-actions-footer">
+                <span class="tool-recorded-tag">✓ Recorded in History</span>
+                <div class="tool-actions-btns">
+                  <button type="button" class="btn btn-secondary btn-sm" id="linkSaveBtn">Save</button>
+                  <button type="button" class="btn btn-secondary btn-sm" id="linkCopyBtn">Copy Report</button>
+                  <button type="button" class="btn btn-primary btn-sm" id="linkViewFullBtn">View Full Report →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="analyze-tool-divider"></div>
+
+          <!-- TOOL 3: SENDER CHECK -->
+          <div class="analyze-card analyze-subtool-card" id="analyzeSenderCard">
+            <div class="workspace-header">
+              <span class="tool-kicker">Sender Verification</span>
+              <h2>Sender Check</h2>
+              <p>Evaluate sender display names and email addresses to detect free webmail impersonation of corporate brands.</p>
+            </div>
+
+            <div class="sender-form-fields">
+              <div class="form-field-unit">
+                <label for="senderDisplayNameInput" class="form-field-label">Display Name</label>
+                <input 
+                  type="text" 
+                  id="senderDisplayNameInput" 
+                  class="tool-input" 
+                  placeholder="e.g. Bank of America Alert, Netflix Billing, FedEx Express" 
+                  aria-label="Display Name"
+                />
+              </div>
+
+              <div class="form-field-unit">
+                <label for="senderEmailInput" class="form-field-label">Email Address</label>
+                <input 
+                  type="email" 
+                  id="senderEmailInput" 
+                  class="tool-input" 
+                  placeholder="e.g. support-boa@yahoo.com, notice@fedex-delivery.xyz" 
+                  aria-label="Email Address"
+                />
+              </div>
+
+              <div class="sender-btn-wrapper">
+                <button type="button" class="btn btn-primary" id="checkSenderBtn">Check Sender →</button>
+              </div>
+            </div>
+
+            <div class="example-chips-group" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+              <span class="example-chips-label">Try sample sender:</span>
+              <button type="button" class="example-chip-btn preset-sender-btn" data-name="Bank of America Alert" data-email="support-boa@yahoo.com">Free Webmail Impersonation</button>
+              <button type="button" class="example-chip-btn preset-sender-btn" data-name="FedEx Parcel" data-email="notice@fedex-delivery.xyz">Suspicious TLD</button>
+              <button type="button" class="example-chip-btn preset-sender-btn" data-name="Google Security" data-email="no-reply@accounts.google.com">Official Corporate Domain</button>
+            </div>
+
+            <div id="senderResultsPanel" class="tool-results-panel">
+              <div class="tool-metrics-grid">
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Display Name</div>
+                  <div class="tool-metric-val" id="senderMetricName">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Detected Email</div>
+                  <div class="tool-metric-val" id="senderMetricEmail">-</div>
+                </div>
+                <div class="tool-metric-item">
+                  <div class="tool-metric-label">Domain</div>
+                  <div class="tool-metric-val" id="senderMetricDomain">-</div>
+                </div>
+              </div>
+
+              <h4 style="margin-bottom:0.75rem; font-size:1.05rem; margin-top:1.25rem;">Sender Observations</h4>
+              <div class="tool-observations-list" id="senderObservationsList">
+                <!-- Populated dynamically -->
+              </div>
+
+              <div class="tool-conclusion-box">
+                <strong>Educational Note:</strong> <span id="senderConclusionText">-</span>
+              </div>
+
+              <div class="tool-actions-footer">
+                <span class="tool-recorded-tag">✓ Recorded in History</span>
+                <div class="tool-actions-btns">
+                  <button type="button" class="btn btn-secondary btn-sm" id="senderSaveBtn">Save</button>
+                  <button type="button" class="btn btn-secondary btn-sm" id="senderCopyBtn">Copy Report</button>
+                  <button type="button" class="btn btn-primary btn-sm" id="senderViewFullBtn">View Full Report →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: RESULTS                                  -->
+      <!-- ============================================== -->
+      <section id="view-results" class="view-section">
+        <div class="container">
+          <!-- Print-Only Document Header (visible only during window.print) -->
+          <div class="print-report-header" id="printReportHeader">
+            <div class="print-header-top">
+              <div class="print-brand-lockup">
+                <svg class="print-brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L4 8V16C4 23.5 9.1 30.5 16 32C22.9 30.5 28 23.5 28 16V8L16 3Z" fill="#EA580C" fill-opacity="0.15" stroke="#EA580C" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M16 10V18M16 22V22.5" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="print-brand-name">SCAMSENSE</span>
+              </div>
+              <div class="print-doc-title">Message Analysis Report</div>
+            </div>
+            <div class="print-meta-grid">
+              <div class="print-meta-item">
+                <span class="print-meta-label">Analysis Date/Time:</span>
+                <span class="print-meta-value" id="printDateTime">-</span>
+              </div>
+              <div class="print-meta-item">
+                <span class="print-meta-label">Warning Level:</span>
+                <span class="print-meta-value" id="printWarningLevel">-</span>
+              </div>
+              <div class="print-meta-item">
+                <span class="print-meta-label">Warning Signs Found:</span>
+                <span class="print-meta-value" id="printSignsCount">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Risk Indicator Banner -->
+          <div class="results-header-banner" id="resultHeaderBanner">
+            <!-- Animated Circular Gauge -->
+            <div class="gauge-wrapper">
+              <svg class="gauge-svg" viewBox="0 0 120 120">
+                <circle class="gauge-bg" cx="60" cy="60" r="50"></circle>
+                <circle class="gauge-meter" id="gaugeMeter" cx="60" cy="60" r="50"></circle>
+              </svg>
+              <div class="gauge-center-text">
+                <span class="gauge-level-label" id="gaugeLevelLabel">LOW</span>
+                <span class="gauge-sub-label">Level</span>
+              </div>
+            </div>
+
+            <div class="results-summary-content">
+              <h2 id="resultLevelTitle">WARNING SIGNS FOUND</h2>
+              <p id="resultLevelExplanation">3 warning signs were found across 2 categories.</p>
+              <div class="results-disclaimer-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>ScamSense cannot confirm whether a message is a scam. It highlights patterns that deserve attention.</span>
+              </div>
+            </div>
+
+            <div class="results-action-buttons">
+              <button type="button" class="btn btn-primary btn-sm" id="saveAnalysisBtn">Save Analysis</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="downloadPdfBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download PDF</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="copyReportBtn">Copy Report</button>
+            </div>
+          </div>
+
+          <!-- Statistical Breakdown -->
+          <div class="breakdown-grid">
+            <div class="breakdown-card">
+              <div class="breakdown-value tabular-nums" id="breakdownSigns">0</div>
+              <div class="breakdown-name">Warning Signs Found</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-value tabular-nums" id="breakdownLinks">0</div>
+              <div class="breakdown-name">Links Detected</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-value tabular-nums" id="breakdownPayments">0</div>
+              <div class="breakdown-name">Payment Requests</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-value tabular-nums" id="breakdownPressure">0</div>
+              <div class="breakdown-name">Pressure Phrases</div>
+            </div>
+          </div>
+
+          <!-- Highlighted Original Message -->
+          <div class="message-highlight-card">
+            <div class="highlight-card-header">
+              <h3>Original Message & Highlighted Patterns</h3>
+              <div class="highlight-legend">
+                <span class="legend-item"><span class="legend-swatch warning"></span> Warning Sign</span>
+                <span class="legend-item"><span class="legend-swatch concern"></span> Possible Concern</span>
+                <span class="legend-item">Regular Text</span>
+              </div>
+            </div>
+            <div class="annotated-message-body" id="annotatedMessageBody">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Warning Sign Cards Section -->
+          <div class="findings-container">
+            <h3>Warning Signs Detected</h3>
+            <div id="findingsCardsList">
+              <!-- Dynamically populated cards -->
+            </div>
+            <div id="noFindingsBanner" class="no-findings-banner" style="display:none;">
+              <div class="no-findings-icon">🛡</div>
+              <h3>No Obvious Warning Patterns Detected</h3>
+              <p>
+                ScamSense did not find obvious warning patterns in this text.
+                This does not guarantee that the message is safe. Verify unexpected requests independently.
+              </p>
+              <a href="#analyze" class="btn btn-secondary btn-sm" data-view="analyze">Check Another Message</a>
+            </div>
+          </div>
+
+          <!-- "What Should I Do?" Section -->
+          <div class="advice-section">
+            <h3>What Should I Do?</h3>
+            <p class="lead">Actionable, beginner-friendly steps to verify this message safely before taking action.</p>
+            <div class="action-steps-list" id="actionStepsList">
+              <!-- Dynamically populated action items -->
+            </div>
+          </div>
+
+          <!-- Final Safety Note -->
+          <div class="disclaimer-callout" style="margin-top:1.5rem; margin-bottom:2rem;">
+            <h4>Important Safety Notice</h4>
+            <p>
+              ScamSense is an educational awareness tool that highlights warning patterns to help you make informed decisions. It does not definitively prove whether a message is fraudulent or genuine. Always independently verify unexpected communications through verified official phone numbers, bookmark URLs, or official apps before releasing funds, OTPs, or passwords.
+            </p>
+          </div>
+
+          <!-- Quick Navigation from Results -->
+          <div class="results-nav-footer" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <button type="button" class="btn btn-secondary" id="reanalyzeBtn">← Re-analyze / Edit Message</button>
+            <button type="button" class="btn btn-primary" id="newScanBtn">Analyze Another Message →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: HISTORY                                  -->
+      <!-- ============================================== -->
+      <section id="view-history" class="view-section">
+        <div class="container container-content">
+          <div class="page-header-block">
+            <span class="page-kicker">Analysis History</span>
+            <h2 class="page-title">Analysis History</h2>
+            <p class="page-subtitle">Every message you analyze is automatically recorded here locally on your device.</p>
+          </div>
+
+          <div class="page-controls-bar">
+            <div class="search-input-wrap">
+              <input 
+                type="text" 
+                class="page-search-input" 
+                id="historySearchInput" 
+                placeholder="Search past analyses..." 
+                aria-label="Search past analyses"
+              />
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="clearHistoryBtn">
+              Clear All History
+            </button>
+          </div>
+
+          <div class="cards-collection-grid" id="historyGrid">
+            <!-- Dynamically populated history cards -->
+          </div>
+
+          <div class="empty-state-card" id="emptyHistoryState" style="display:none;">
+            <div class="empty-state-icon">📋</div>
+            <h3 class="empty-state-title">No Analysis History Yet</h3>
+            <p class="empty-state-desc">Messages you analyze will appear here.</p>
+            <a href="#analyze" class="btn btn-primary" data-view="analyze">Analyze a Message</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: SAVED                                    -->
+      <!-- ============================================== -->
+      <section id="view-saved" class="view-section">
+        <div class="container container-content">
+          <div class="page-header-block">
+            <span class="page-kicker">Saved Collection</span>
+            <h2 class="page-title">Saved Analyses</h2>
+            <p class="page-subtitle">Analyses you have explicitly saved for future reference and offline download.</p>
+          </div>
+
+          <div class="page-controls-bar">
+            <div class="search-input-wrap">
+              <input 
+                type="text" 
+                class="page-search-input" 
+                id="savedSearchInput" 
+                placeholder="Search saved analyses..." 
+                aria-label="Search saved analyses"
+              />
+            </div>
+            <span class="saved-count-indicator" id="savedCountLabel">0 items</span>
+          </div>
+
+          <div class="cards-collection-grid" id="savedGrid">
+            <!-- Dynamically populated saved cards -->
+          </div>
+
+          <div class="empty-state-card" id="emptySavedState" style="display:none;">
+            <div class="empty-state-icon">⭐</div>
+            <h3 class="empty-state-title">Saved Analyses</h3>
+            <p class="empty-state-desc">No saved analyses yet. Save an analysis to find it here.</p>
+            <a href="#analyze" class="btn btn-primary" data-view="analyze">Analyze a Message</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: LEARN                                    -->
+      <!-- ============================================== -->
+      <section id="view-learn" class="view-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Knowledge Guide</span>
+            <h2 class="section-title">Learn the Warning Signs</h2>
+            <p class="section-subtitle">Understand how psychological triggers and digital deception work so you can recognize red flags.</p>
+          </div>
+
+          <!-- Warning Signs Accordion -->
+          <div class="topics-accordion" id="topicsAccordion">
+            <!-- Dynamically populated from LEARN_TOPICS in learn.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW: ABOUT                                    -->
+      <!-- ============================================== -->
+      <section id="view-about" class="view-section">
+        <div class="container-narrow">
+          <div class="about-card">
+            <h2>What is ScamSense?</h2>
+            <p>
+              ScamSense is an educational browser-based tool created to help everyday internet users cultivate healthy skepticism and recognize common warning signs in suspicious messages, emails, and links.
+            </p>
+            <p>
+              Rather than relying on vague "AI black-box detection scores," ScamSense explains the concrete psychology behind deceptive communications: artificial urgency, fear tactics, unauthorized fee demands, and credential traps.
+            </p>
+
+            <div class="about-pillars-grid">
+              <div class="about-pillar">
+                <div class="about-pillar-icon">🔒</div>
+                <h4>100% Client-Side</h4>
+                <p>Everything runs directly in your browser. Your messages and notes are never sent to external servers or stored in any remote database.</p>
+              </div>
+              <div class="about-pillar">
+                <div class="about-pillar-icon">💡</div>
+                <h4>Actionable Guidance</h4>
+                <p>Instead of panic, ScamSense provides simple verification steps so you always know what to check independently before taking action.</p>
+              </div>
+              <div class="about-pillar">
+                <div class="about-pillar-icon">🎓</div>
+                <h4>Educational Focus</h4>
+                <p>Built as a learning companion that trains your intuition over time, turning you and your family into harder targets for scammers.</p>
+              </div>
+            </div>
+
+            <!-- Mandatory Educational Disclaimer -->
+            <div class="disclaimer-callout">
+              <h4>Important Safety Notice</h4>
+              <p>
+                ScamSense does not guarantee that a message is safe or fraudulent. It provides educational indicators that can help you decide what to verify. Always independently contact organizations through official bookmarks, app stores, or phone numbers printed on your billing statements.
+              </p>
+            </div>
+
+            <div style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+              <div>
+                <h4 style="font-size:1.1rem; margin-bottom:0.25rem;">Data Management</h4>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0;">
+                  Erase all locally stored history and saved analyses from this device.
+                </p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="clearAllDataBtn" style="color:#DC2626;">
+                Clear My Local Data
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scanning Animation Overlay -->
+    <div class="scanning-overlay" id="scanningOverlay" role="dialog" aria-modal="true" aria-labelledby="scanningTitle">
+      <div class="scanning-dialog">
+        <div class="scanning-spinner"></div>
+        <h3 class="scanning-title" id="scanningTitle">Analyzing Message Patterns</h3>
+        <div class="scanning-step-label tabular-nums" id="scanningStepLabel">SCANNING MESSAGE STRUCTURE...</div>
+        <div class="scanning-progress-bar">
+          <div class="scanning-progress-fill" id="scanningProgressFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Accessible Confirmation Modal -->
+    <div class="modal-overlay" id="confirmModalOverlay" role="dialog" aria-modal="true" aria-labelledby="confirmModalTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="confirmModalTitle">Confirm Action</h3>
+          <button type="button" class="modal-close-btn" id="confirmModalClose" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body" id="confirmModalBody">
+          Are you sure you want to proceed?
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="confirmModalCancel">Cancel</button>
+          <button type="button" class="btn btn-primary" id="confirmModalAction">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Toast Notification System -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          SCAMSENSE
+        </div>
+        <div class="footer-copy">
+          Educational scam awareness reviewer · Free & open in-browser tool · Zero server tracking
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modular Vanilla JavaScript Application Entry Point -->
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
